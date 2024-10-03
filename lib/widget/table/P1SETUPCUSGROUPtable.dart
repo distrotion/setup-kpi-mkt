@@ -18,9 +18,17 @@ class P1SETUPCUSGROUPtable extends StatelessWidget {
           ),
         ),
         Expanded(
-          flex: 4,
+          flex: 2,
           child: rowbox_type0(
             Head: "CUSTSHOT",
+            Colorss: Color(0xff0057F1),
+            Colorst: Colors.white,
+          ),
+        ),
+        Expanded(
+          flex: 2,
+          child: rowbox_type0(
+            Head: "GROUP TS",
             Colorss: Color(0xff0057F1),
             Colorst: Colors.white,
           ),
@@ -37,6 +45,14 @@ class P1SETUPCUSGROUPtable extends StatelessWidget {
           flex: 2,
           child: rowbox_type0(
             Head: "GROUP",
+            Colorss: Color(0xff0057F1),
+            Colorst: Colors.white,
+          ),
+        ),
+        Expanded(
+          flex: 2,
+          child: rowbox_type0(
+            Head: "MKT GROUP",
             Colorss: Color(0xff0057F1),
             Colorst: Colors.white,
           ),
@@ -91,9 +107,15 @@ class P1SETUPCUSGROUPtableitem extends StatelessWidget {
           ),
         ),
         Expanded(
-          flex: 4,
+          flex: 2,
           child: rowbox_type0(
             Head: text02,
+          ),
+        ),
+        Expanded(
+          flex: 2,
+          child: rowbox_type0(
+            Head: text05,
           ),
         ),
         Expanded(
@@ -106,6 +128,12 @@ class P1SETUPCUSGROUPtableitem extends StatelessWidget {
           flex: 2,
           child: rowbox_type0(
             Head: text04,
+          ),
+        ),
+        Expanded(
+          flex: 2,
+          child: rowbox_type0(
+            Head: text06,
           ),
         ),
         Expanded(

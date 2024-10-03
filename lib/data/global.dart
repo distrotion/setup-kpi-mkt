@@ -19,4 +19,4 @@ class logindata {
 }
 
 // String server = 'http://127.0.0.1:14000/';
-String server = 'http://172.23.10.51:14000/';
+String server = 'http://172.23.10.34:14000/';

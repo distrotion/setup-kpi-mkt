@@ -6,4 +6,6 @@ class P1SETUPCUSGROUPvar {
   static String UID = '';
   static String TYPE = '';
   static String GROUP = '';
+
+  static String MKTGROUP = '';
 }

@@ -50,7 +50,10 @@ class P1SETUPCUSGROUPGET__Bloc
             CustFull: safenull(databuff[i]['CustFull']),
             CustShort: safenull(databuff[i]['CustShort']),
             TYPE: safenull(databuff[i]['TYPE']),
+            GroupNameTS: safenull(databuff[i]['GroupNameTS']),
+            //GroupNameTS
             GROUP: safenull(databuff[i]['GROUP']),
+            MKTGROUP: safenull(databuff[i]['MKTGROUP']),
           ));
         }
       }
@@ -69,6 +72,7 @@ class P1SETUPCUSGROUPGET__Bloc
         "Id": P1SETUPCUSGROUPvar.UID,
         "TYPE": P1SETUPCUSGROUPvar.TYPE,
         "GROUP": P1SETUPCUSGROUPvar.GROUP,
+        "MKTGROUP": P1SETUPCUSGROUPvar.MKTGROUP,
       },
     );
 
@@ -93,6 +97,8 @@ class P1SETUPCUSGROUPGETclass {
     this.CustShort = '',
     this.TYPE = '',
     this.GROUP = '',
+    this.GroupNameTS = '',
+    this.MKTGROUP = '',
   });
 
   String Id;
@@ -101,6 +107,8 @@ class P1SETUPCUSGROUPGETclass {
   String CustShort;
   String TYPE;
   String GROUP;
+  String GroupNameTS;
+  String MKTGROUP;
 }
 
 String safenull(var input) {
