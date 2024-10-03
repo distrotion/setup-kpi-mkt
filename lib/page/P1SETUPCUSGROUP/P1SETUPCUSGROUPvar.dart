@@ -8,4 +8,6 @@ class P1SETUPCUSGROUPvar {
   static String GROUP = '';
 
   static String MKTGROUP = '';
+  static String FRE = '';
+  static String REPORTITEMS = '';
 }

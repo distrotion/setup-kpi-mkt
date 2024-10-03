@@ -93,9 +93,16 @@ class _P1SETUPCUSGROUPmainState extends State<P1SETUPCUSGROUPmain> {
                 text04: _data[i].GROUP,
                 text05: _data[i].GroupNameTS,
                 text06: _data[i].MKTGROUP,
+                text07: _data[i].FRE,
+                text08: _data[i].REPORTITEMS,
                 RETURNFN: (v) {
                   // print(_data[i].Id);
                   P1SETUPCUSGROUPvar.UID = _data[i].Id;
+                  P1SETUPCUSGROUPvar.TYPE = _data[i].TYPE;
+                  P1SETUPCUSGROUPvar.GROUP = _data[i].GROUP;
+                  P1SETUPCUSGROUPvar.MKTGROUP = _data[i].MKTGROUP;
+                  P1SETUPCUSGROUPvar.FRE = _data[i].FRE;
+                  P1SETUPCUSGROUPvar.REPORTITEMS = _data[i].REPORTITEMS;
                   TEMPpop(context);
                 },
               ),
@@ -209,6 +216,47 @@ class _TempSelectWALLetState extends State<TempSelectWALLet> {
                   value: P1SETUPCUSGROUPvar.MKTGROUP,
                   height: 40,
                   width: 200,
+                ),
+              ),
+              SizedBox(
+                height: 80,
+                width: 250,
+                child: AdvanceDropDown(
+                  sLabel: "Freq.",
+                  imgpath: '',
+                  listdropdown: const [
+                    MapEntry("", ""),
+                    MapEntry("1<", "1<"),
+                    MapEntry("1", "1"),
+                    MapEntry("2", "2"),
+                    MapEntry("3", "3"),
+                    MapEntry("4", "4"),
+                  ],
+                  onChangeinside: (d, v) {
+                    P1SETUPCUSGROUPvar.FRE = d;
+                  },
+                  value: P1SETUPCUSGROUPvar.FRE,
+                  height: 40,
+                  width: 200,
+                ),
+              ),
+              SizedBox(
+                height: 80,
+                width: 250,
+                child: ComInputText(
+                  isNumberOnly: true,
+                  sLabel: "Report Items",
+                  height: 40,
+                  isContr: P1SETUPCUSGROUPvar.iscontrol,
+                  fnContr: (input) {
+                    setState(() {
+                      P1SETUPCUSGROUPvar.iscontrol = input;
+                    });
+                  },
+                  sValue: P1SETUPCUSGROUPvar.REPORTITEMS,
+                  returnfunc: (String s) {
+                    P1SETUPCUSGROUPvar.REPORTITEMS = s;
+                  },
                 ),
               ),
               SizedBox(
